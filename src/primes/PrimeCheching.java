@@ -17,20 +17,20 @@ public class PrimeCheching
             System.out.printf("%d is not prime %n\n", nmbr);
 
         System.out.println("enter start limit\n");
-        int start = sc.nextInt();
+        long start = sc.nextLong();
         System.out.println("enter end limit\n");
-        int last = sc.nextInt();
-        for (int i = start; i <= last; i++)
+        long last = sc.nextLong();
+        for (long i = start; i <= last; i++)
         {
             if (checkPrime(i))
             {
-                System.out.println(i + "\t");
+                System.out.print(i + "\t");
             }
         }
     }
 
 
-    private static boolean checkPrime(int nmbr)
+    private static boolean checkPrime(long nmbr)
     {
 
 
@@ -43,7 +43,7 @@ public class PrimeCheching
         {
             return false;
         }
-        int checkTill = (int) Math.sqrt(nmbr);
+        long checkTill = (long) Math.sqrt(nmbr);
         for (int i = 3; i < checkTill; i += 2)
         {
             if (nmbr % i == 0 || nmbr % checkTill == 0)
